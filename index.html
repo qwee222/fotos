@@ -1,8 +1,30 @@
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+    /* Estilos generales */
+.imagen_next, .is_movil {
+    display: none; /* Ocultar ambos por defecto */
+}
+
+/* Mostrar .imagen_next en pantallas de PC (ancho mayor a 768px) */
+@media screen and (min-width: 769px) {
+    .imagen_next {
+        display: block;
+    }
+}
+
+/* Mostrar .is_movil en pantallas móviles (ancho menor o igual a 768px) */
+@media screen and (max-width: 768px) {
+    .is_movil {
+        display: block;
+    }
+}
+</style>
 <script id="_wau1ca">var _wau = _wau || []; _wau.push(["dynamic", "keila23", "1ca", "ffffffffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -25,7 +47,9 @@
 </div>
 <div class="step-item" style="display: block;">
 <div class="question-title ">
-    <img src="https://i.imgur.com/W0qSsZw.png" class="imagen_next">
+    <img src="https://i.imgur.com/pM5wxWy.png" class="imagen_next">
+    <img src="https://i.imgur.com/W0qSsZw.png" class="is_movil">
+
 </div>
 <div class="buttons-block">
 <div class="step-btn no-btn tr-next-button tr-b-option">
@@ -38,7 +62,8 @@ Si
 </div>
 <div class="step-item" style="display: none;">
 <div class="question-title ">
-    <img src="https://i.imgur.com/pM5wxWy.png" class="imagen_next">
+   <img src="https://i.imgur.com/pM5wxWy.png" class="imagen_next">
+    <img src="https://i.imgur.com/W0qSsZw.png" class="is_movil">
 </div>
 <div class="buttons-block">
 <div class="step-btn no-btn tr-next-button tr-b-option">
@@ -52,6 +77,7 @@ Si
 <div class="step-item thishide" style="display: none;">
 <div class="question-title ">
     <img src="https://i.imgur.com/pM5wxWy.png" class="imagen_next">
+    <img src="https://i.imgur.com/W0qSsZw.png" class="is_movil">
 </div>
 <p>
 <b style="color: red;">
@@ -79,7 +105,7 @@ Si
                 const images = document.querySelectorAll('.imagen_next');
                 images.forEach(image => {
                     if (isMobile()) {
-                        image.style.width = '110%';
+                        image.style.width = '100%';
                     } else {
                         image.style.width = 'auto'; // Tamaño original
                     }
